@@ -131,6 +131,17 @@
   transform: translate(-50%);
   background-color: white;
 }
+
+.article .closeButton {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
 .article-open {
   height: 400px;
   animation: articleOpen 1s;
