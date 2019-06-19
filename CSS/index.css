@@ -133,6 +133,30 @@
 }
 .article-open {
   height: 400px;
+  animation: articleOpen 1s;
+}
+
+@keyframes articleOpen {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 400px;
+  }
+}
+
+.article-closed {
+  height: 50px;
+  animation: articleClosed 1s;
+}
+
+@keyframes articleClosed {
+  0% {
+    height: 400px;
+  }
+  100% {
+    height: 50px;
+  }
 }
 html,
 body {
