@@ -99,10 +99,17 @@ function createArticle(title, date, content) {
   articleTitle.textContent = title;
   articleDate.textContent = date;
   articleContent.textContent = content;
+  articleButton.textContent = "Click to Expand";
 
   // button events
   articleButton.addEventListener("click", event => {
-    article.classList.toggle("close", "article-open");
+    article.classList.toggle("close");
+    article.classList.toggle("article-open");
+    if (article.classList.contains("article-open")) {
+      articleButton.textContent = "Click to Close";
+    } else {
+      articleButton.textContent = "Click to Expand";
+    }
   });
 
   return article;
