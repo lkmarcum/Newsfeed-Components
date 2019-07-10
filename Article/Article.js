@@ -72,6 +72,10 @@ const articleData = [
 
 const articles = document.querySelector(".articles");
 
+articleData.forEach(data => {
+  articles.appendChild(createArticle(data.title, data.date, data.content));
+});
+
 function createArticle(title, date, content) {
   // define elements
   const article = document.createElement("div");
@@ -100,4 +104,6 @@ function createArticle(title, date, content) {
   articleButton.addEventListener("click", event => {
     article.classList.toggle("close", "article-open");
   });
+
+  return article;
 }
