@@ -97,7 +97,7 @@ function createArticle(title, date, content) {
   articleContent.textContent = content;
 
   // button events
-  // articleButton.addEventListener("click", event => {
-
-  // })
+  articleButton.addEventListener("click", event => {
+    article.classList.toggle("close", "article-open");
+  });
 }
