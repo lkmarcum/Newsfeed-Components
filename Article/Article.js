@@ -1,33 +1,3 @@
-// Because classes are not hoisted you will need to start your code at the bottom of the page.  Look for the comment "START HERE"
-
-// class Article {
-//   constructor(domElement) {
-//     // assign this.domElement to the passed in domElement
-//     this.domElement;
-//     // create a reference to the ".expandButton" class.
-//     this.expandButton;
-//     // Using your expandButton reference, update the text on your expandButton to say "expand"
-
-//     // Set a click handler on the expandButton reference, calling the expandArticle method.
-
-//   }
-
-//   expandArticle() {
-//     // Using our reference to the domElement, toggle a class to expand or hide the article.
-
-//   }
-// }
-
-/* START HERE: 
-
-- Select all classes named ".article" and assign that value to the articles variable.  
-
-- With your selection in place, now chain .forEach() on to the articles variable to iterate over the articles NodeList and create a new instance of Article by passing in each article as a parameter to the Article class.
-
-*/
-
-// let articles;
-
 const articleData = [
   {
     title: `Lambda School Students: "We're the best!"`,
@@ -115,6 +85,22 @@ const articleData = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
+
+/* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
+  
+  <div class="article">
+    <h2>{title of the article}</h2>
+    <p class="date">{date of the article}</p>
+    {three separate paragraph elements}
+    <span class='expandButton'></span>
+  </div>
+  Hint: You will need to use createElement more than once here!
+  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each peice of the data object above.
+  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+  Step 3: return the entire component.
+  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
+*/
 
 const articles = document.querySelector(".articles");
 
